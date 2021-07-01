@@ -1,11 +1,10 @@
-import { Icon } from '@material-ui/core';
 import React from 'react';
 import './SidebarRow.css';
-const SidebarRow = ({title,Icon}) => {
+const SidebarRow = ({selected,title,Icon}) => {
     return (
-        <div className="sidebar_row">
-            <Icon />
-            <h2>{title}</h2>
+        <div className={`sidebarRow ${selected && "selected"}`}>
+            <Icon className="sidebarRow_icon" />
+            <h2 className="sidebarRow_title" >{title}</h2>
         </div>
     );
 };
